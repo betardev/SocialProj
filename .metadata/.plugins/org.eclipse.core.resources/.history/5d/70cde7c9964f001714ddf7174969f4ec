@@ -12,11 +12,11 @@
 <body>
     <% 
      UserInfo getUserInf = new UserInfo();
+     UserManagement pushToDB = new UserManagement();
      getUserInf.setUserName(request.getParameter("username"));
      getUserInf.setEmail(request.getParameter("email"));
      getUserInf.setPassWord(request.getParameter("password"));
      getUserInf.setStatus(1);
-     UserManagement pushToDB = new UserManagement();
      pushToDB.addNewUser(getUserInf);
     %>
 </body>

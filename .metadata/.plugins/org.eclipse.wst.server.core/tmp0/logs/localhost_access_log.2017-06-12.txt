@@ -75,3 +75,5 @@
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:26:30 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 869
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:26:38 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=giorgi&email=giorgtarkasdkl&password=romeli&cnfpassword=romeli&submitinfobtn=Confirm HTTP/1.1" 200 275
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:26:48 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=dada&email=dudu&password=dadada&cnfpassword=dadada&submitinfobtn=Confirm HTTP/1.1" 200 275
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:44:43 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 869
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:44:45 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=&email=&password=&cnfpassword=&submitinfobtn=Confirm HTTP/1.1" 200 275
