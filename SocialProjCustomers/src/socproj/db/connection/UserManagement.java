@@ -7,7 +7,7 @@ public class UserManagement {
 	   
 	   public static void main(String[] args) throws SQLException{
 		   UserManagement uni = new UserManagement();
-		   UserInfo userTest = new UserInfo("irg","kaka@gmail.com","justpass");
+		   UserInfo userTest = new UserInfo("akulag","kaka@gmail.com","justpass");
 		   userTest = uni.addNewUser(userTest);
 		   System.out.println(userTest.getUserId());
 	}

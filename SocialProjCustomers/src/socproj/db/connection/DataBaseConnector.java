@@ -10,7 +10,12 @@ public class DataBaseConnector {
 	
 	    Connection establishConnection() throws SQLException{
 	    	Connection conn = null;
-	    	
+	    	try{
+	    	 Class.forName("com.mysql.jdbc.Driver");  
+	    	}
+	    	catch (ClassNotFoundException e){
+	    	 throw new SQLException("Driver not found");
+	    	}
 	    	
 	    	System.out.println("Connecting to database...");
 		    conn = DriverManager.getConnection(DB_URL,USER,PASS);

@@ -3,6 +3,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+
 public class HelloWorld extends HttpServlet {
  
   private String message;
@@ -19,6 +20,7 @@ public class HelloWorld extends HttpServlet {
 
       PrintWriter out = response.getWriter();
       out.println("<h1>" + message + "</h1>");
+ //     <%!  %>
   }
   
   public void destroy()
@@ -26,3 +28,5 @@ public class HelloWorld extends HttpServlet {
 
   }
 }
+
+
