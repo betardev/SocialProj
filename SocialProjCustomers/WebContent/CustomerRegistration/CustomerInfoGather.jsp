@@ -1,3 +1,4 @@
+<%@ page import = "java.security.*" %>
 <%@ page import = "socproj.db.connection.UserManagement" %>
 <%@ page import = "socproj.db.connection.UserInfo" %>
 <%@ page import = "socproj.db.connection.DataBaseConnector" %>
@@ -11,13 +12,31 @@
 </head>
 <body>
     <% 
-     UserInfo getUserInf = new UserInfo();
-     getUserInf.setUserName(request.getParameter("username"));
-     getUserInf.setEmail(request.getParameter("email"));
-     getUserInf.setPassWord(request.getParameter("password"));
-     getUserInf.setStatus(1);
-     UserManagement pushToDB = new UserManagement();
-     pushToDB.addNewUser(getUserInf);
+		String passSec = request.getParameter("password");
+		MessageDigest mdAlgorithm = MessageDigest.getInstance("MD5");
+		mdAlgorithm.update(passSec.getBytes());
+		byte[] digest = mdAlgorithm.digest();
+		StringBuffer hexString = new StringBuffer();
+
+		for (int i = 0; i < digest.length; i++) {
+	    	passSec = Integer.toHexString(0xFF & digest[i]);
+
+	    if (passSec.length() < 2) {
+	    	passSec = "0" + passSec;
+	    }
+
+	   	 	hexString.append(passSec);
+		}
+    
+    
+    
+     	UserInfo getUserInf = new UserInfo();
+     	getUserInf.setUserName(request.getParameter("username"));
+     	getUserInf.setEmail(request.getParameter("email"));
+     	getUserInf.setPassWord(passSec);
+     	getUserInf.setStatus(1);
+     	UserManagement pushToDB = new UserManagement();
+     	pushToDB.addNewUser(getUserInf);
     %>
 </body>
 </html>
