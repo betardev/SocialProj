@@ -1,0 +1,102 @@
+package socproj.db.connection;
+import java.sql.*;
+
+
+
+public class UserManagement {
+	   
+	   public static void main(String[] args) throws SQLException{
+		   UserManagement uni = new UserManagement();
+		   UserInfo userTest = new UserInfo("kulag","kaka@gmail.com","justpass");
+		   userTest = uni.addNewUser(userTest);
+		   System.out.println(userTest.getUserId());
+	}
+	   
+	   /** Get user information from database by ID 
+	    * @param id unique identifier of the user
+	    **/
+	   public UserInfo getUserInfo(long id) throws SQLException{
+		   UserInfo user = new UserInfo();
+	       Connection conn = null;
+		   DataBaseConnector dbc = new DataBaseConnector();
+		   conn = dbc.establishConnection();
+		   PreparedStatement stat = conn.prepareStatement("Select * from soc_user where id=?");
+		   stat.setLong(1, id);
+		   ResultSet result = stat.executeQuery();   
+	       while(result.next()){ 
+	        user = processResult(result);
+	        break;
+	       }
+	       
+	        
+	       stat.close();
+		   conn.close();  
+		   return user;
+	   }
+	   
+	   /** Get user information from username
+	    * @param username unique identifier of the user
+	    **/
+	   public UserInfo getUserInfo(String userName) throws SQLException{
+		   UserInfo user = new UserInfo();
+	       Connection conn = null;
+		   DataBaseConnector dbc = new DataBaseConnector();
+		   conn = dbc.establishConnection();
+		   PreparedStatement stat = conn.prepareStatement("Select * from soc_user where username=?");
+		   stat.setString(1, userName);
+		   ResultSet result = stat.executeQuery();      
+	       while(result.next()){ 
+		    user = processResult(result);
+		    break;
+	       }
+	       
+	        
+	       stat.close();
+		   conn.close();
+		   return user;
+		   
+	   }
+	   
+	   /** Add new User to the DataBase
+	    * @param user unique identifier
+	    **/
+	   public UserInfo addNewUser(UserInfo user) throws SQLException{
+		   Connection conn = null;
+		   DataBaseConnector dbc = new DataBaseConnector();
+		   conn = dbc.establishConnection();
+		   PreparedStatement stat = conn.prepareStatement("insert into soc_user (username, email, passkey, status) Values(?,?,?,?)");
+		   stat.setString(1, user.getUserName());
+		   stat.setString(2, user.getEmail());
+		   stat.setString(3, user.getPassWord());
+		   stat.setInt(4, user.getStatus());
+		   stat.executeUpdate();
+		   conn.commit();
+		   stat.close();
+		   conn.close();
+		   user = getUserInfo(user.getUserName());
+		   
+		   
+		  
+		   return user;
+	   }
+	   
+	   
+	   private UserInfo processResult(ResultSet result) throws SQLException{
+		   UserInfo user = new UserInfo();
+		   
+	           user.setUserName(result.getString("username"));
+	           user.setEmail(result.getString("email"));
+	           user.setPassWord(result.getString("passkey"));
+	           user.setUserId(result.getLong("id"));
+	           user.setStatus(result.getInt("status"));
+	           
+		   return user;
+	   }
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	}

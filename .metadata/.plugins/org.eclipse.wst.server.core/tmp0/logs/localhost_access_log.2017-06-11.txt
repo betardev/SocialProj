@@ -1,0 +1,8 @@
+127.0.0.1 - - [11/Jun/2017:19:49:02 +0400] "GET / HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:49:10 +0400] "GET /SocialProjCustomers/index.html HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:49:11 +0400] "GET / HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:49:18 +0400] "GET /SocProj/index.html HTTP/1.1" 404 1099
+127.0.0.1 - - [11/Jun/2017:19:49:44 +0400] "GET / HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:49:45 +0400] "GET /SocialProjCustomers/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:50:02 +0400] "GET /SocialProjCustomers/index.html HTTP/1.1" 200 150
+0:0:0:0:0:0:0:1 - - [11/Jun/2017:19:50:08 +0400] "GET /SocialProjCustomers/index.html HTTP/1.1" 200 150
