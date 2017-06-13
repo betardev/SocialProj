@@ -1,4 +1,5 @@
 <%@ page import = "java.security.*" %>
+<%@ page import = "java.sql.*" %>
 <%@ page import = "socproj.db.connection.UserManagement" %>
 <%@ page import = "socproj.db.connection.UserInfo" %>
 <%@ page import = "socproj.db.connection.DataBaseConnector" %>
@@ -11,7 +12,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <% 
+ <%
+ 
+//Check if sent username exists or not;
+UserManagement usernameDBCheck = new UserManagement();
+String usernameInfo = request.getParameter("username");
+String emailInfo = request.getParameter("email");
+String passwordInfo = request.getParameter("password");
+if(usernameDBCheck.getUserInfo(usernameInfo).getUserName() != null){
+	out.print("Username already exists");
+}
+else out.print("Everything is fine");
+ 
+ 
+ 
+ 
+ %>
+   
+    
+</body>
+</html>
+
+
+
+
+   <%-- <% 
 		String passSec = request.getParameter("password");
 		MessageDigest mdAlgorithm = MessageDigest.getInstance("MD5");
 		mdAlgorithm.update(passSec.getBytes());
@@ -24,7 +49,6 @@
 	    if (passSec.length() < 2) {
 	    	passSec = "0" + passSec;
 	    }
-
 	   	 	hexString.append(passSec);
 		}
     
@@ -33,11 +57,9 @@
      	UserInfo getUserInf = new UserInfo();
      	getUserInf.setUserName(request.getParameter("username"));
      	getUserInf.setEmail(request.getParameter("email"));
-     	getUserInf.setPassWord(passSec);
+     	getUserInf.setPassWord(hexString.toString());
      	getUserInf.setStatus(1);
      	UserManagement pushToDB = new UserManagement();
      	pushToDB.addNewUser(getUserInf);
     %>
-    <h1> <%= passSec%></h1>
-</body>
-</html>
+    <h1> <%= hexString.toString()%></h1> --%>

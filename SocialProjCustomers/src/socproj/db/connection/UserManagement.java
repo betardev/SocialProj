@@ -7,9 +7,11 @@ public class UserManagement {
 	   
 	   public static void main(String[] args) throws SQLException{
 		   UserManagement uni = new UserManagement();
-		   UserInfo userTest = new UserInfo("akulag","kaka@gmail.com","justpass");
-		   userTest = uni.addNewUser(userTest);
-		   System.out.println(userTest.getUserId());
+		   //UserInfo userTest = new UserInfo("akulag","kaka@gmail.com","justpass");
+		   //userTest = uni.addNewUser(userTest);
+		   //System.out.println(userTest.getUserId());
+		   //UserInfo userTest = uni.getUserInfo("giorgi");
+		   //System.out.println(userTest.getUserName());
 	}
 	   
 	   /** Get user information from database by ID 
@@ -49,8 +51,6 @@ public class UserManagement {
 		    user = processResult(result);
 		    break;
 	       }
-	       
-	        
 	       stat.close();
 		   conn.close();
 		   return user;

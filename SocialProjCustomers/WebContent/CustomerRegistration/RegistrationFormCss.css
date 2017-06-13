@@ -20,7 +20,7 @@ input[type=password], select {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=button] {
     width: 100%;
     background-color: #FFCC00;
     font-size: 15px;
@@ -34,7 +34,7 @@ input[type=submit] {
     font-weight: bold;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
 	margin-left: 80px;
     background-color: #FFDB4A;
 }
@@ -45,14 +45,31 @@ form {
 
 
 div {
-	margin-top: 130px;
+	margin-top: 80px;
     border-radius: 20px;
     border-style: outset;
     background-color: white;
     padding: 0px;
 }
 
-p {
+#problemShower{
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: white;
+	border-style: solid;
+	border-width : 2px;
+	border-color: black;
+	border-radius: 20px;
+	color: #525252;
+	font-size: 20px;
+	font-weight: bold;
+	margin-right: 0px;	
+	
+	
+}
+
+#regText {
+	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	background-color: #FFCC00;
 	border-style: solid;
