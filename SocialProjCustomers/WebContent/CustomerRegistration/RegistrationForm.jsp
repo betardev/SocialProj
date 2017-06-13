@@ -5,35 +5,35 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-</head>
-<body bgcolor = "FFCC00">
+<style>
+     <%@ include file="RegistrationFormCss.css"%>
+</style>
 
+</head>
+<body bgcolor = "#f4b642">
+<div align="center">
 <form name = "registerForm" action = "CustomerInfoGather.jsp">
  <table>
   <tr> 
-   <td> Username :  </td>
-   <td> <input name = "username"/>  </td>
+   <td> <input name = "username" type = "text" placeholder = "Username.."/>  </td>
   </tr>
   <tr> 
-   <td> email :  </td>
-   <td> <input name = "email"/>  </td>
+   <td> <input name = "email" type = "text" placeholder = "email.."/>  </td>
   </tr>
   <tr> 
-   <td> Password :  </td>
-   <td> <input type = "password" name = "password"/>  </td>
+   <td> <input type = "password" name = "password" placeholder = "password.."/>  </td>
   </tr>
   <tr> 
-   <td> confirm password :  </td>
-   <td> <input type = "password" name = "cnfpassword"/>  </td>
+   <td> <input type = "password" name = "cnfpassword" placeholder = "confirm password.."/>  </td>
   </tr>
   <tr>
-   <td/>
-   <td>
+  <td>
    <input type = "submit" name = "submitinfobtn" value = "Confirm">
    </td>
   </tr>
  </table>
 </form>
+</div>
 
 </body>
 </html>

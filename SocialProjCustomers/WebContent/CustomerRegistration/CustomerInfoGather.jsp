@@ -29,7 +29,7 @@
 		}
     
     
-    
+        
      	UserInfo getUserInf = new UserInfo();
      	getUserInf.setUserName(request.getParameter("username"));
      	getUserInf.setEmail(request.getParameter("email"));
@@ -38,5 +38,6 @@
      	UserManagement pushToDB = new UserManagement();
      	pushToDB.addNewUser(getUserInf);
     %>
+    <h1> <%= passSec%></h1>
 </body>
 </html>
