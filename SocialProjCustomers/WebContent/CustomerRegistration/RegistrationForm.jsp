@@ -12,6 +12,7 @@
 </head>
 <body bgcolor = "#f4b642">
 <div align="center">
+<p> Registration </p>
 <form name = "registerForm" action = "CustomerInfoGather.jsp">
  <table>
   <tr> 

@@ -27,7 +27,7 @@ input[type=submit] {
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    margin-left: 60px;
+    margin-left: 80px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -35,7 +35,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	margin-left: 60px;
+	margin-left: 80px;
     background-color: #FFDB4A;
 }
 
@@ -46,7 +46,22 @@ form {
 
 div {
 	margin-top: 130px;
-    border-radius: 200px;
+    border-radius: 20px;
+    border-style: outset;
     background-color: white;
-    padding: 5px;
+    padding: 0px;
+}
+
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #FFCC00;
+	border-style: solid;
+	border-width : 2px;
+	border-color: #FFCC00;
+	color: #525252;
+	font-size: 30px;
+	font-weight: bold;
+	margin-right: 0px;
+	
+	
 }
