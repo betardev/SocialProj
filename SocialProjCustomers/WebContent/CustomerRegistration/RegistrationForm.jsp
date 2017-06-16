@@ -18,16 +18,16 @@
   <!-- action = "CustomerInfoGather.jsp" --> 
  <table>
   <tr> 
-   <td> <input name = "username" id = "username" type = "text" onkeyup = "checkForProblems(); sendFormInfo()"  placeholder = "Username.."/>  </td>
+   <td> <input name = "username" id = "username" type = "text" onkeyup = "seondFormInfo()"  placeholder = "Username.."/>  </td>
   </tr>
   <tr> 
-   <td> <input name = "email" id = "email" type = "text" onkeyup = "checkForProblems()" placeholder = "email.."/>  </td>
+   <td> <input name = "email" id = "email" type = "text" onkeyup = "sendFormInfo()" placeholder = "email.."/>  </td>
   </tr>
   <tr> 
-   <td> <input type = "password" name = "password" id = "firstPass" onkeyup = "checkForProblems()" placeholder = "password.." />  </td>
+   <td> <input type = "password" name = "password" id = "firstPass" onkeyup = "sendFormInfo()" placeholder = "password.." />  </td>
   </tr>
   <tr> 
-   <td> <input type = "password" name = "cnfpassword" id = "confPass" onkeyup = "checkForProblems()" placeholder = "confirm password.."/>  </td>
+   <td> <input type = "password" name = "cnfpassword" id = "confPass" onkeyup = "sendFormInfo()" placeholder = "confirm password.."/>  </td>
   </tr>
   <tr>
   <td>
@@ -70,6 +70,8 @@ function getInfo(){
 	if(request.readyState == 4){
 			document.getElementById("problemShower").innerHTML = request.responseText; 
 	}  	
+	//TODO: if response is Everything is fine, then checkForProblems, couldn't get response that I can check, it responds very long text, so can't be checked
+	checkForProblems();
 }
 
 
