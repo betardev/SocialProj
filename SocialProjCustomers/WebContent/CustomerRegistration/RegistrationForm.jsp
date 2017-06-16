@@ -18,16 +18,16 @@
   <!-- action = "CustomerInfoGather.jsp" --> 
  <table>
   <tr> 
-   <td> <input name = "username" id = "username" type = "text" onkeyup = "sendFormInfo(); checkUsername(); checkPassword()"  placeholder = "Username.."/>  </td>
+   <td> <input name = "username" id = "username" type = "text" onkeyup = "checkForProblems(); sendFormInfo()"  placeholder = "Username.."/>  </td>
   </tr>
   <tr> 
-   <td> <input name = "email" id = "email" type = "text" placeholder = "email.."/>  </td>
+   <td> <input name = "email" id = "email" type = "text" onkeyup = "checkForProblems()" placeholder = "email.."/>  </td>
   </tr>
   <tr> 
-   <td> <input type = "password" name = "password" id = "firstPass" onkeyup = "checkPassword()" placeholder = "password.." />  </td>
+   <td> <input type = "password" name = "password" id = "firstPass" onkeyup = "checkForProblems()" placeholder = "password.." />  </td>
   </tr>
   <tr> 
-   <td> <input type = "password" name = "cnfpassword" id = "confPass" placeholder = "confirm password.."/>  </td>
+   <td> <input type = "password" name = "cnfpassword" id = "confPass" onkeyup = "checkForProblems()" placeholder = "confirm password.."/>  </td>
   </tr>
   <tr>
   <td>
@@ -41,15 +41,14 @@
 <script>
  
 var request;
+var isProblem = false;
 
 //Send Form information to get confirmation everything is valid.
 function sendFormInfo(){
-	//document.getElementById("problemShower").innerHTML = "Clicked";
 	var usernameInfo = document.getElementById("username").value;
 	var emailInfo = document.getElementById("email").value;
 	var passwordInfo = document.getElementById("firstPass").value;
 	var url="CustomerInfoGather.jsp?username="+usernameInfo + "&email=" + emailInfo + "&password=" + passwordInfo;
-	//document.getElementById("problemShower").innerHTML = usernameInfo + "  " + emailInfo + "  " + passwordInfo;
 	 
 	if(window.XMLHttpRequest){  
 		request=new XMLHttpRequest();  
@@ -69,51 +68,47 @@ function sendFormInfo(){
 //Recieve information from database.
 function getInfo(){
 	if(request.readyState == 4){
-		if(request.responseText.length == 323){
 			document.getElementById("problemShower").innerHTML = request.responseText; 
-		}
-		else{
-			document.getElementById("problemShower").innerHTML = "Everything is fine";
-		}
-			
 	}  	
 }
 
-/*
-function checkUsername(){
-    	if(document.getElementById("username").value.length < 5 && document.getElementById("username").value.length > 0){
-     		document.getElementById("problemShower").innerHTML = "Username is too short";
-    	}
-    	else if(document.getElementById("username").value.length > 18){
-    		document.getElementById("problemShower").innerHTML = "Username is too long";
-    	}
-    	else{
-    		document.getElementById("problemShower").innerHTML = "Everything is fine";
-    	}
-	
-}
-*/
-/*
-function checkPassword(){
+
+
+function checkForProblems(){
+    
+	if(!isProblem){
+		if(document.getElementById("username").value.length < 5 && document.getElementById("username").value.length > 0){
+			document.getElementById("problemShower").innerHTML = "Username is too short";
+			return;
+		}
+		if(document.getElementById("username").value.length > 18){
+			document.getElementById("problemShower").innerHTML = "Username is too long";
+			return;
+		}
 		if(document.getElementById("firstPass").value.length < 5 && document.getElementById("firstPass").value.length > 0){
-			document.getElementById("firstPass").innerHTML = "Password is too short";
+			document.getElementById("problemShower").innerHTML = "Password is too short";
+			return;
 		}
-		else if(document.getElementById("firstPass").value.length > 26){
-			document.getElementById("firstPass").innerHTML = "Password is too long";
+		if(document.getElementById("firstPass").value.length > 26){
+			document.getElementById("problemShower").innerHTML = "Password is too long";
+			return;
 		}
-		else{
-			document.getElementById("firstPass").innerHTML = "Everything is fine";
+		if(document.getElementById("confPass").value != document.getElementById("firstPass").value && document.getElementById("confPass").value.length > 0 && document.getElementById("firstPass").value.length > 0){
+			document.getElementById("problemShower").innerHTML = "Passwords don't match";
+			return;
 		}
-}
-*/
-/*function checkConfPassword(){
-	 	if(document.getElementById("firstPass").value == document.getElementById("confPass").value)
-	 		document.getElementById("problemShower") = "Everything is fine";
-	 	else document.getElementById("problemShower") = "Passwords don't match";
+		    document.getElementById("problemShower").innerHTML = "Everything is fine";
+	}
+			
+	   
+			
 	
-}*/
-
-
+	
+	
+	//PUT EMAIL VALIDATION BETWEEN USERNAME AND PASSWORD VALIDATION ^^
+	
+	
+}
 
 	
 	
