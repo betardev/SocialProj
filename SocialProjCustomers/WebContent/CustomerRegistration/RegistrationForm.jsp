@@ -22,52 +22,57 @@
 	<div class = "col-xs-12">
 		<p class ="text-center text-success" id = "problemShower"> Everything is fine </p>
 	</div>
-    <div class = "col-xs-3">
+    <div class = "col-xs-4">
     </div>
-    <div class = "col-xs-6">
+    <div class = "col-xs-4">
   		<form>
  			<div class = "form-group">
- 				<input name = "username" class = "form-control" id = "username" type = "text" onkeyup = "sendFormInfo()"  placeholder = "Username.."/>
+ 				<input name = "username" class = "form-control" id = "username" onkeyup = "checkUserBool()" type = "text"  placeholder = "Username.."/>
   			</div>
   	    	<div class = "form-group">
- 				<input name = "email" class = "form-control" id = "email" type = "text" onkeyup = "sendFormInfo()" placeholder = "email.."/>
+ 				<input name = "email" class = "form-control" id = "email" type = "text" onkeyup = "checkUserBool()" placeholder = "email.."/>
         	</div>
         	<div class = "form-group">
- 				<input type = "password" class = "form-control" name = "password" id = "firstPass" onkeyup = "sendFormInfo()" placeholder = "password.." />
+ 				<input type = "password" class = "form-control" name = "password" id = "firstPass" onkeyup = "checkUserBool()" placeholder = "password.." />
  			</div>
 			<div class = "form-group">
- 				<input type = "password" class = "form-control" name = "cnfpassword" id = "confPass" onkeyup = "sendFormInfo()" placeholder = "confirm password.."/>
+ 				<input type = "password" class = "form-control" name = "cnfpassword" id = "confPass" onkeyup = "checkUserBool()" placeholder = "confirm password.."/>
  			</div>
- 			<div class = "form-group">
- 				<button type = "button" class = "form-control btn btn-info " onclick = "sendFormInfo()"> Register </button>
+ 			<div class = "text-center">
+ 				<button type = "button" class = " btn btn-info " onclick = "sendFormInfo()"> Register </button>
  			</div>
   		</form>
   	</div>	
-  	<div class = "col-xs-3">
+  	<div class = "col-xs-4">
   	</div>				
   </div>
 </div>
 <script>
  
 var request;
-var isProblem = false;
+var userExists = false;
+
+
+
 
 function sendFormInfo(){
 	var usernameInfo = document.getElementById("username").value;
 	var emailInfo = document.getElementById("email").value;
 	var passwordInfo = document.getElementById("firstPass").value;
+	
+	hashPass(passwordInfo);
 	var url="CustomerInfoGather.jsp?username="+usernameInfo + "&email=" + emailInfo + "&password=" + passwordInfo;
 	 
 	if(window.XMLHttpRequest){  
-		request=new XMLHttpRequest();  
+		request = new XMLHttpRequest();  
 	}  
     else if(window.ActiveXObject){  
-		request=new ActiveXObject("Microsoft.XMLHTTP");  
+		request = new ActiveXObject("Microsoft.XMLHTTP");  
 	}  
 	
-	try{  
-		request.onreadystatechange = getInfo;  
-		request.open("GET",url,true);  
+	try{   
+		request.open("GET",url,true);
+		request.onreadystatechange = getInfo;
 		request.send();  
 		}catch(e){alert("Unable to connect to server");}  
 }
@@ -76,17 +81,36 @@ function sendFormInfo(){
 //Recieve information from database.
 function getInfo(){
 	if(request.readyState == 4){
-			document.getElementById("problemShower").innerHTML = request.responseText; 
+		var jsonResponse = JSON.parse(request.responseText);
+		if(jsonResponse.isProblem == "true"){
+			document.getElementById("problemShower").innerHTML = "Username already exists";
+			document.getElementById("problemShower").classList.remove("text-success");
+			document.getElementById("problemShower").classList.add("text-danger");
+			userExists = true;
+		}
+		if(jsonResponse.isProblem == "false"){
+			document.getElementById("problemShower").classList.remove("text-danger");
+			document.getElementById("problemShower").classList.add("text-success");
+			document.getElementById("problemShower").innerHTML = "Everything is fine";
+			userExists = false;
+			checkForProblems();
+		}
 	}  	
 	//TODO: if response is Everything is fine, then checkForProblems, couldn't get response that I can check, it responds very long text, so can't be checked
-	checkForProblems();
+	
+
+}
+
+
+function checkUserBool(){
+	if(!userExists)
+		checkForProblems();
 }
 
 
 
 function checkForProblems(){
     
-	if(!isProblem){
 		if(document.getElementById("username").value.length < 5 && document.getElementById("username").value.length > 0){
 			document.getElementById("problemShower").classList.remove("text-success");
 			document.getElementById("problemShower").classList.add("text-danger");
@@ -99,6 +123,11 @@ function checkForProblems(){
 			document.getElementById("problemShower").innerHTML = "Username is too long";
 			return;
 		}
+		
+		//---------------------------------------------------------
+		//PUT EMAIL VALIDATION HERE ^^
+		//---------------------------------------------------------
+		
 		if(document.getElementById("firstPass").value.length < 5 && document.getElementById("firstPass").value.length > 0){
 			document.getElementById("problemShower").innerHTML = "Password is too short";
 			document.getElementById("problemShower").classList.remove("text-success");
@@ -120,14 +149,7 @@ function checkForProblems(){
 			document.getElementById("problemShower").classList.remove("text-danger");
 			document.getElementById("problemShower").classList.add("text-success");
 		    document.getElementById("problemShower").innerHTML = "Everything is fine";
-	}
-			
-	   
-			
 	
-	
-	
-	//PUT EMAIL VALIDATION BETWEEN USERNAME AND PASSWORD VALIDATION ^^
 	
 	
 }

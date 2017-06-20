@@ -1,5 +1,4 @@
 package socproj.db.connection;
-
 public class UserInfo {
 
 	/** 

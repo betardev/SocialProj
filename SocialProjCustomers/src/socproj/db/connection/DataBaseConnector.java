@@ -1,6 +1,5 @@
 package socproj.db.connection;
 import java.sql.*;
-
 public class DataBaseConnector {
 	   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	   static final String DB_URL = "jdbc:mysql://localhost/SocialProj";
