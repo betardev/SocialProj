@@ -32,34 +32,3 @@ else out.print("Everything is fine");
     
 </body>
 </html>
-
-
-
-
-   <%-- <% 
-		String passSec = request.getParameter("password");
-		MessageDigest mdAlgorithm = MessageDigest.getInstance("MD5");
-		mdAlgorithm.update(passSec.getBytes());
-		byte[] digest = mdAlgorithm.digest();
-		StringBuffer hexString = new StringBuffer();
-
-		for (int i = 0; i < digest.length; i++) {
-	    	passSec = Integer.toHexString(0xFF & digest[i]);
-
-	    if (passSec.length() < 2) {
-	    	passSec = "0" + passSec;
-	    }
-	   	 	hexString.append(passSec);
-		}
-    
-    
-        
-     	UserInfo getUserInf = new UserInfo();
-     	getUserInf.setUserName(request.getParameter("username"));
-     	getUserInf.setEmail(request.getParameter("email"));
-     	getUserInf.setPassWord(hexString.toString());
-     	getUserInf.setStatus(1);
-     	UserManagement pushToDB = new UserManagement();
-     	pushToDB.addNewUser(getUserInf);
-    %>
-    <h1> <%= hexString.toString()%></h1> --%>
