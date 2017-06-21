@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ include file = "hashPassword.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -59,8 +60,6 @@ function sendFormInfo(){
 	var usernameInfo = document.getElementById("username").value;
 	var emailInfo = document.getElementById("email").value;
 	var passwordInfo = document.getElementById("firstPass").value;
-	
-	hashPass(passwordInfo);
 	var url="CustomerInfoGather.jsp?username="+usernameInfo + "&email=" + emailInfo + "&password=" + passwordInfo;
 	 
 	if(window.XMLHttpRequest){  
@@ -81,6 +80,7 @@ function sendFormInfo(){
 //Recieve information from database.
 function getInfo(){
 	if(request.readyState == 4){
+		alert(request.responseText);
 		var jsonResponse = JSON.parse(request.responseText);
 		if(jsonResponse.isProblem == "true"){
 			document.getElementById("problemShower").innerHTML = "Username already exists";

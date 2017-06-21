@@ -7,18 +7,9 @@
 <%@ page import = "socproj.db.connection.DataBaseConnector" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%!
 
-<%
-
-
-String passSec = request.getParameter("password");
+public String returnHashPass(String passSec) throws NoSuchAlgorithmException{
 MessageDigest mdAlgorithm = MessageDigest.getInstance("MD5");
 mdAlgorithm.update(passSec.getBytes());
 byte[] digest = mdAlgorithm.digest();
@@ -30,11 +21,7 @@ if (passSec.length() < 2) {
 }
 	 	hexString.append(passSec);
 }
-
-
+return hexString.toString();
+}
 
 %>
-
-
-</body>
-</html>
