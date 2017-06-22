@@ -51,9 +51,8 @@
 <script>
  
 var request;
+var isProblem = false;
 var userExists = false;
-
-
 
 
 function sendFormInfo(){
@@ -107,10 +106,15 @@ function checkUserBool(){
 		checkForProblems();
 }
 
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 
 
 function checkForProblems(){
-    
+        isProblem = true;
 		if(document.getElementById("username").value.length < 5 && document.getElementById("username").value.length > 0){
 			document.getElementById("problemShower").classList.remove("text-success");
 			document.getElementById("problemShower").classList.add("text-danger");
@@ -123,10 +127,13 @@ function checkForProblems(){
 			document.getElementById("problemShower").innerHTML = "Username is too long";
 			return;
 		}
-		
-		//---------------------------------------------------------
-		//PUT EMAIL VALIDATION HERE ^^
-		//---------------------------------------------------------
+			
+		if(!validateEmail(document.getElementById("email").value)){
+			document.getElementById("problemShower").innerHTML = "Please enter valid email address";
+			document.getElementById("problemShower").classList.remove("text-success");
+			document.getElementById("problemShower").classList.add("text-danger");
+			return;
+		}
 		
 		if(document.getElementById("firstPass").value.length < 5 && document.getElementById("firstPass").value.length > 0){
 			document.getElementById("problemShower").innerHTML = "Password is too short";
@@ -134,7 +141,7 @@ function checkForProblems(){
 			document.getElementById("problemShower").classList.add("text-danger");
 			return;
 		}
-		if(document.getElementById("firstPass").value.length > 26){
+		if(document.getElementById("firstPass").value.length > 36){
 			document.getElementById("problemShower").innerHTML = "Password is too long";
 			document.getElementById("problemShower").classList.remove("text-success");
 			document.getElementById("problemShower").classList.add("text-danger");
@@ -146,12 +153,11 @@ function checkForProblems(){
 			document.getElementById("problemShower").classList.add("text-danger");
 			return;
 		}
+			isProblem = false;
 			document.getElementById("problemShower").classList.remove("text-danger");
 			document.getElementById("problemShower").classList.add("text-success");
 		    document.getElementById("problemShower").innerHTML = "Everything is fine";
-	
-	
-	
+		
 }
 
 	
