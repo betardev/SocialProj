@@ -15,13 +15,19 @@ String usernameInfo = request.getParameter("username");
 String emailInfo = request.getParameter("email");
 String passwordInfo = request.getParameter("password");
 JSONObject returnData = new JSONObject();
-returnData.put("passHash", returnHashPass(passwordInfo));
+passwordInfo = returnHashPass(passwordInfo);
 PrintWriter dataOut = response.getWriter();
 if(usernameDBCheck.getUserInfo(usernameInfo).getUserName() != null){
 	returnData.put("isProblem", "true");
-	
 }
 else{
+	UserManagement pushUsrDB = new UserManagement();
+	UserInfo setUserInf = new UserInfo();
+	setUserInf.setStatus(1);
+	setUserInf.setEmail(emailInfo);
+	setUserInf.setUserName(usernameInfo);
+	setUserInf.setPassWord(passwordInfo);
+	pushUsrDB.addNewUser(setUserInf);
 	returnData.put("isProblem", "false");
 }
 

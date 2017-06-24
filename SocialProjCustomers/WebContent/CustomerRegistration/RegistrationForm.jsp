@@ -40,7 +40,7 @@
  				<input type = "password" class = "form-control" name = "cnfpassword" id = "confPass" onkeyup = "checkUserBool()" placeholder = "confirm password.."/>
  			</div>
  			<div class = "text-center">
- 				<button type = "button" class = " btn btn-info " onclick = "sendFormInfo()"> Register </button>
+ 				<button type = "button" class = " btn btn-info " onclick = "sendFormInfo();"> Register </button>
  			</div>
   		</form>
   	</div>	
@@ -53,12 +53,15 @@
 var request;
 var isProblem = false;
 var userExists = false;
-
+var isFull = false;
 
 function sendFormInfo(){
 	var usernameInfo = document.getElementById("username").value;
 	var emailInfo = document.getElementById("email").value;
 	var passwordInfo = document.getElementById("firstPass").value;
+	isFull = false;
+	checkForProblems();
+	if(!isProblem && isFull){
 	var url="CustomerInfoGather.jsp?username="+usernameInfo + "&email=" + emailInfo + "&password=" + passwordInfo;
 	 
 	if(window.XMLHttpRequest){  
@@ -71,8 +74,15 @@ function sendFormInfo(){
 	try{   
 		request.open("GET",url,true);
 		request.onreadystatechange = getInfo;
-		request.send();  
+		request.send();
 		}catch(e){alert("Unable to connect to server");}  
+	}
+	if(!isFull && !isProblem){
+		document.getElementById("problemShower").innerHTML = "Please fill the form";
+		document.getElementById("problemShower").classList.remove("text-success");
+		document.getElementById("problemShower").classList.add("text-danger");
+	}
+		
 }
 
 
@@ -107,8 +117,8 @@ function checkUserBool(){
 }
 
 function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+    	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   	 	return re.test(email);
 }
 
 
@@ -128,7 +138,7 @@ function checkForProblems(){
 			return;
 		}
 			
-		if(!validateEmail(document.getElementById("email").value)){
+		if(!validateEmail(document.getElementById("email").value) && document.getElementById("email").value.length > 0){
 			document.getElementById("problemShower").innerHTML = "Please enter valid email address";
 			document.getElementById("problemShower").classList.remove("text-success");
 			document.getElementById("problemShower").classList.add("text-danger");
@@ -157,7 +167,12 @@ function checkForProblems(){
 			document.getElementById("problemShower").classList.remove("text-danger");
 			document.getElementById("problemShower").classList.add("text-success");
 		    document.getElementById("problemShower").innerHTML = "Everything is fine";
-		
+		    
+		if(document.getElementById("firstPass").value.length > 0 && document.getElementById("confPass").value.length > 0 && document.getElementById("email").value.length > 0 && document.getElementById("username").value.length > 0){    
+			if(!isProblem){
+				isFull = true;
+			}
+		}
 }
 
 	
