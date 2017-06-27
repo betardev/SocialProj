@@ -17,7 +17,7 @@ public class UserManagement {
 	   /** Get user information from database by ID 
 	    * @param id unique identifier of the user
 	    **/
-	   public UserInfo getUserInfo(long id) throws SQLException{
+	   public UserInfo getUserInfoById(long id) throws SQLException{
 		   UserInfo user = new UserInfo();
 	       Connection conn = null;
 		   DataBaseConnector dbc = new DataBaseConnector();
@@ -39,7 +39,7 @@ public class UserManagement {
 	   /** Get user information from username
 	    * @param username unique identifier of the user
 	    **/
-	   public UserInfo getUserInfo(String userName) throws SQLException{
+	   public UserInfo getUserInfoByUsername(String userName) throws SQLException{
 		   UserInfo user = new UserInfo();
 	       Connection conn = null;
 		   DataBaseConnector dbc = new DataBaseConnector();
@@ -57,6 +57,47 @@ public class UserManagement {
 		   
 	   }
 	   
+	   
+	   
+	   public UserInfo getUserInfoByEmail(String email) throws SQLException{
+		   UserInfo user = new UserInfo();
+	       Connection conn = null;
+		   DataBaseConnector dbc = new DataBaseConnector();
+		   conn = dbc.establishConnection();
+		   PreparedStatement stat = conn.prepareStatement("Select * from soc_user where email=?");
+		   stat.setString(1, email);
+		   ResultSet result = stat.executeQuery();      
+	       while(result.next()){ 
+		    user = processResult(result);
+		    break;
+	       }
+	       stat.close();
+		   conn.close();
+		   return user;
+		   
+	   }
+	   
+	   
+	   public UserInfo comparePassword(String password) throws SQLException{
+		   UserInfo user = new UserInfo();
+	       Connection conn = null;
+		   DataBaseConnector dbc = new DataBaseConnector();
+		   conn = dbc.establishConnection();
+		   PreparedStatement stat = conn.prepareStatement("Select * from soc_user where password=?");
+		   stat.setString(1, password);
+		   ResultSet result = stat.executeQuery();      
+	       while(result.next()){ 
+		    user = processResult(result);
+		    break;
+	       }
+	       stat.close();
+		   conn.close();
+		   return user;   
+	   }
+	   
+	   
+	
+	   
 	   /** Add new User to the DataBase
 	    * @param user unique identifier
 	    **/
@@ -73,12 +114,13 @@ public class UserManagement {
 		   conn.commit();
 		   stat.close();
 		   conn.close();
-		   user = getUserInfo(user.getUserName());
-		   
-		   
+		   user = getUserInfoByUsername(user.getUserName());
 		  
 		   return user;
 	   }
+	   
+
+	   
 	   
 	   
 	   private UserInfo processResult(ResultSet result) throws SQLException{

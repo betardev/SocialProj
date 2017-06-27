@@ -17,7 +17,7 @@ String passwordInfo = request.getParameter("password");
 JSONObject returnData = new JSONObject();
 passwordInfo = returnHashPass(passwordInfo);
 PrintWriter dataOut = response.getWriter();
-if(usernameDBCheck.getUserInfo(usernameInfo).getUserName() != null){
+if(usernameDBCheck.getUserInfoByUsername(usernameInfo).getUserName() != null){
 	returnData.put("isProblem", "true");
 }
 else{
@@ -33,3 +33,4 @@ else{
 
 dataOut.println(returnData);
 %>
+

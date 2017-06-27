@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Registration</title>
 <style>
      <%@ include file = "Bootstrap/css/bootstrap.min.css" %>
      <%@ include file = "CustomDes.css" %>
@@ -105,7 +105,6 @@ function getInfo(){
 			checkForProblems();
 		}
 	}  	
-	//TODO: if response is Everything is fine, then checkForProblems, couldn't get response that I can check, it responds very long text, so can't be checked
 	
 
 }
