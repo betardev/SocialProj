@@ -77,3 +77,16 @@
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:26:48 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=dada&email=dudu&password=dadada&cnfpassword=dadada&submitinfobtn=Confirm HTTP/1.1" 200 275
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:44:43 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 869
 0:0:0:0:0:0:0:1 - - [12/Jun/2017:21:44:45 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=&email=&password=&cnfpassword=&submitinfobtn=Confirm HTTP/1.1" 200 275
+127.0.0.1 - - [12/Jun/2017:22:42:49 +0400] "GET / HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:22:42:51 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 888
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:22:43:05 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=kjadkjsnacja&email=gjdkasjda@gmail.com&password=romelikuku&cnfpassword=romelikuku&submitinfobtn=Confirm HTTP/1.1" 200 275
+127.0.0.1 - - [12/Jun/2017:23:00:18 +0400] "GET / HTTP/1.1" 404 1081
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:00:18 +0400] "GET /SocialProjCustomers/WEB-INF/classes/socproj/db/connection/test.java HTTP/1.1" 404 1058
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:01:16 +0400] "GET /SocialProjCustomers/WEB-INF/classes/socproj/db/connection/test.java HTTP/1.1" 404 1058
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:03:14 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp HTTP/1.1" 500 2893
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:05:36 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 888
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:05:52 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=giorgitarkha&email=giorgi.tarkhnishvili123@gmail.com&password=romelisaatia&cnfpassword=romelisaatia&submitinfobtn=Confirm HTTP/1.1" 200 277
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:06:15 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=giorgitarkha1&email=giorgi.tarkhnishvili123@gmail.com&password=romelisaatia&cnfpassword=romelisaatia&submitinfobtn=Confirm HTTP/1.1" 200 277
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:06:33 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=giorgitarkha12&email=giorgi.tarkhnishvili123@gmail.com&password=dubadubadubadudu&cnfpassword=dubadubadubadudu&submitinfobtn=Confirm HTTP/1.1" 200 277
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:09:51 +0400] "GET /SocialProjCustomers/CustomerRegistration/RegistrationForm.jsp HTTP/1.1" 200 888
+0:0:0:0:0:0:0:1 - - [12/Jun/2017:23:10:04 +0400] "GET /SocialProjCustomers/CustomerRegistration/CustomerInfoGather.jsp?username=dkjasjda&email=kukashka&password=romelisaatiatrobissaatia&cnfpassword=romelisaatiatrobissaatia&submitinfobtn=Confirm HTTP/1.1" 200 277

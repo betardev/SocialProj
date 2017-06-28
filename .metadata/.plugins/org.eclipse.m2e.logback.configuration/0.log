@@ -1,3 +1,230 @@
 2017-06-11 19:34:39,774 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2017-06-11 20:22:38,860 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2017-06-12 18:05:01,202 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-12 22:38:19,918 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-13 12:37:38,414 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-13 23:46:17,560 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-13 23:49:44,136 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-13 23:52:09,644 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-14 00:06:23,215 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-14 00:33:12,007 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-14 02:43:18,689 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-16 16:59:41,060 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-16 17:34:46,525 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-16 20:01:16,128 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @8810534ms
+2017-06-16 20:01:16,427 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-06-16 20:01:16,521 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3494fc42{/wse,null,AVAILABLE}
+2017-06-16 20:01:16,601 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@760dd164{HTTP/1.1,[http/1.1]}{0.0.0.0:52340}
+2017-06-16 20:01:16,601 [main] INFO  org.eclipse.jetty.server.Server - Started @8811008ms
+2017-06-16 20:01:19,588 [qtp1466144065-576] WARN  o.e.jetty.servlet.ServletHandler - 
+org.apache.jasper.JasperException: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:492) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:378) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.jsp.jasper.JspServlet.service(JspServlet.java:155) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.registry.internal.ServletManager$ServletWrapper.service(ServletManager.java:180) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.HttpServiceRuntimeImpl$LegacyServlet.service(HttpServiceRuntimeImpl.java:1221) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:62) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:132) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ProxyServlet.service(ProxyServlet.java:100) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.jetty.internal.HttpServerManager$InternalHttpServiceServlet.service(HttpServerManager.java:310) ~[org.eclipse.equinox.http.jetty_3.3.0.v20160324-1850.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845) ~[org.eclipse.jetty.servlet_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583) [org.eclipse.jetty.servlet_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:224) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1174) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511) [org.eclipse.jetty.servlet_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1106) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.Server.handle(Server.java:524) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:319) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:253) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_121]
+Caused by: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.server.ResponseWriter.isOpen(ResponseWriter.java:133) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:202) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.io.PrintWriter.write(Unknown Source) ~[na:1.8.0_121]
+	at org.eclipse.equinox.http.servlet.internal.servlet.HttpServletResponseWrapperImpl$InternalWriter.write(HttpServletResponseWrapperImpl.java:176) ~[na:na]
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:185) ~[na:na]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:240) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1003) ~[na:na]
+	at org.apache.jsp.uddi.navigator_005ftoolbar_jsp._jspService(org.apache.jsp.uddi.navigator_005ftoolbar_jsp:127) ~[na:na]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:403) ~[na:na]
+	... 34 common frames omitted
+Caused by: org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:197) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:419) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:313) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:141) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:741) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:241) ~[org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224) ~[org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:521) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:697) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:746) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:179) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:163) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.flush(HttpOutput.java:299) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpWriter.flush(HttpWriter.java:56) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.ResponseWriter.flush(ResponseWriter.java:147) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.io.PrintWriter.flush(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:242) ~[na:na]
+	at java.io.PrintWriter.flush(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:242) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1003) ~[na:na]
+	at org.apache.jsp.uddi.scripts.uddiframesets_jsp._jspService(org.apache.jsp.uddi.scripts.uddiframesets_jsp:61) ~[na:na]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:403) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:492) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:378) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.jsp.jasper.JspServlet.service(JspServlet.java:155) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.registry.internal.ServletManager$ServletWrapper.service(ServletManager.java:180) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.HttpServiceRuntimeImpl$LegacyServlet.service(HttpServiceRuntimeImpl.java:1221) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:62) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:132) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.RequestDispatcherAdaptor.include(RequestDispatcherAdaptor.java:48) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1015) ~[na:na]
+	at org.apache.jsp.uddi.navigator_005ftoolbar_jsp._jspService(org.apache.jsp.uddi.navigator_005ftoolbar_jsp:87) ~[na:na]
+	... 37 common frames omitted
+Caused by: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method) ~[na:1.8.0_121]
+	at sun.nio.ch.SocketDispatcher.writev(Unknown Source) ~[na:1.8.0_121]
+	at sun.nio.ch.IOUtil.write(Unknown Source) ~[na:1.8.0_121]
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source) ~[na:1.8.0_121]
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:177) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	... 73 common frames omitted
+2017-06-16 20:01:19,628 [qtp1466144065-576] WARN  o.eclipse.jetty.server.HttpChannel - //127.0.0.1:52340/wse/uddi/navigator_toolbar.jsp
+org.apache.jasper.JasperException: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:492) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:378) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.jsp.jasper.JspServlet.service(JspServlet.java:155) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.registry.internal.ServletManager$ServletWrapper.service(ServletManager.java:180) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.HttpServiceRuntimeImpl$LegacyServlet.service(HttpServiceRuntimeImpl.java:1221) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:62) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:132) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ProxyServlet.service(ProxyServlet.java:100) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.jetty.internal.HttpServerManager$InternalHttpServiceServlet.service(HttpServerManager.java:310) ~[na:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:845) ~[na:na]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583) ~[na:na]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:224) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1174) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511) ~[na:na]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1106) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:134) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.Server.handle(Server.java:524) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:319) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:253) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:273) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:93) [org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.executeProduceConsume(ExecuteProduceConsume.java:303) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceConsume(ExecuteProduceConsume.java:148) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:136) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:671) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:589) [org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_121]
+Caused by: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.server.ResponseWriter.isOpen(ResponseWriter.java:133) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:202) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.io.PrintWriter.write(Unknown Source) ~[na:1.8.0_121]
+	at org.eclipse.equinox.http.servlet.internal.servlet.HttpServletResponseWrapperImpl$InternalWriter.write(HttpServletResponseWrapperImpl.java:176) ~[na:na]
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:185) ~[na:na]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:240) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1003) ~[na:na]
+	at org.apache.jsp.uddi.navigator_005ftoolbar_jsp._jspService(org.apache.jsp.uddi.navigator_005ftoolbar_jsp:127) ~[na:na]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:403) ~[na:na]
+	... 34 common frames omitted
+Caused by: org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:197) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:419) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:313) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:141) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:741) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:241) ~[org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224) ~[org.eclipse.jetty.util_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:521) [org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:697) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:746) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:179) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:163) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpOutput.flush(HttpOutput.java:299) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.HttpWriter.flush(HttpWriter.java:56) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at org.eclipse.jetty.server.ResponseWriter.flush(ResponseWriter.java:147) ~[org.eclipse.jetty.server_9.3.9.v20160517.jar:9.3.9.v20160517]
+	at java.io.PrintWriter.flush(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:242) ~[na:na]
+	at java.io.PrintWriter.flush(Unknown Source) ~[na:1.8.0_121]
+	at org.apache.jasper.runtime.JspWriterImpl.flush(JspWriterImpl.java:242) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1003) ~[na:na]
+	at org.apache.jsp.uddi.scripts.uddiframesets_jsp._jspService(org.apache.jsp.uddi.scripts.uddiframesets_jsp:61) ~[na:na]
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:403) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:492) ~[na:na]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:378) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.jsp.jasper.JspServlet.service(JspServlet.java:155) ~[na:na]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790) ~[javax.servlet_3.1.0.v201410161800.jar:3.1.0]
+	at org.eclipse.equinox.http.registry.internal.ServletManager$ServletWrapper.service(ServletManager.java:180) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.HttpServiceRuntimeImpl$LegacyServlet.service(HttpServiceRuntimeImpl.java:1221) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.registration.EndpointRegistration.service(EndpointRegistration.java:153) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.ResponseStateHandler.processRequest(ResponseStateHandler.java:62) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.context.DispatchTargets.doDispatch(DispatchTargets.java:132) ~[na:na]
+	at org.eclipse.equinox.http.servlet.internal.servlet.RequestDispatcherAdaptor.include(RequestDispatcherAdaptor.java:48) ~[na:na]
+	at org.apache.jasper.runtime.JspRuntimeLibrary.include(JspRuntimeLibrary.java:1015) ~[na:na]
+	at org.apache.jsp.uddi.navigator_005ftoolbar_jsp._jspService(org.apache.jsp.uddi.navigator_005ftoolbar_jsp:87) ~[na:na]
+	... 37 common frames omitted
+Caused by: java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method) ~[na:1.8.0_121]
+	at sun.nio.ch.SocketDispatcher.writev(Unknown Source) ~[na:1.8.0_121]
+	at sun.nio.ch.IOUtil.write(Unknown Source) ~[na:1.8.0_121]
+	at sun.nio.ch.SocketChannelImpl.write(Unknown Source) ~[na:1.8.0_121]
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:177) ~[org.eclipse.jetty.io_9.3.9.v20160517.jar:9.3.9.v20160517]
+	... 73 common frames omitted
+2017-06-16 20:35:11,283 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@760dd164{HTTP/1.1,[http/1.1]}{0.0.0.0:0}
+2017-06-16 20:35:11,347 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3494fc42{/wse,null,UNAVAILABLE}
+2017-06-16 20:35:54,205 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-16 22:23:17,178 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-17 00:43:29,584 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-17 22:07:47,600 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-20 17:48:35,852 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-20 20:40:00,868 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-20 20:43:34,139 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-21 17:20:59,350 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-21 18:17:36,152 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-21 18:20:31,625 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-22 19:05:51,543 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-24 15:06:21,625 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-24 16:02:55,001 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-27 19:29:49,488 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2017-06-27 21:01:03,219 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-27 21:43:45,187 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-28 10:56:03,435 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2017-06-28 18:19:44,236 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

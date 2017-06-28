@@ -1,23 +1,36 @@
+<%@ page import = "java.security.*" %>
+<%@ page import = "java.sql.*" %>
+<%@ page import = "java.io.*" %>
+<%@ page import = "org.json.simple.*" %>
 <%@ page import = "socproj.db.connection.UserManagement" %>
 <%@ page import = "socproj.db.connection.UserInfo" %>
 <%@ page import = "socproj.db.connection.DataBaseConnector" %>
+<%@ include file = "hashPassword.jsp" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-    <% 
-     UserInfo getUserInf = new UserInfo();
-     getUserInf.setUserName(request.getParameter("username"));
-     getUserInf.setEmail(request.getParameter("email"));
-     getUserInf.setPassWord(request.getParameter("password"));
-     getUserInf.setStatus(1);
-     UserManagement pushToDB = new UserManagement();
-     pushToDB.addNewUser(getUserInf);
-    %>
-</body>
-</html>
+
+<%
+UserManagement usernameDBCheck = new UserManagement();
+String usernameInfo = request.getParameter("username");
+String emailInfo = request.getParameter("email");
+String passwordInfo = request.getParameter("password");
+JSONObject returnData = new JSONObject();
+passwordInfo = returnHashPass(passwordInfo);
+PrintWriter dataOut = response.getWriter();
+if(usernameDBCheck.getUserInfoByUsername(usernameInfo).getUserName() != null){
+	returnData.put("isProblem", "true");
+}
+else{
+	UserManagement pushUsrDB = new UserManagement();
+	UserInfo setUserInf = new UserInfo();
+	setUserInf.setStatus(1);
+	setUserInf.setEmail(emailInfo);
+	setUserInf.setUserName(usernameInfo);
+	setUserInf.setPassWord(passwordInfo);
+	pushUsrDB.addNewUser(setUserInf);
+	returnData.put("isProblem", "false");
+}
+
+dataOut.println(returnData);
+%>
+

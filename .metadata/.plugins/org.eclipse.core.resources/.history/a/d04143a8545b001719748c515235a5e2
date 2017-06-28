@@ -1,0 +1,96 @@
+<%@ page import = "java.security.*" %>
+<%@ page import = "java.sql.*" %>
+<%@ page import = "java.io.*" %>
+<%@ page import = "org.json.simple.*" %>
+<%@ page import = "socproj.db.connection.UserManagement" %>
+<%@ page import = "socproj.db.connection.UserInfo" %>
+<%@ page import = "socproj.db.connection.DataBaseConnector" %>
+<%@ include file = "hashPassword.jsp" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style>
+     <%@ include file = "Bootstrap/css/bootstrap.min.css" %>
+     <%@ include file = "CustomDes.css" %>
+     body { background: #E8E8E8 !important; }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login</title>
+</head>
+<body bgcolor = "#E8E8E8">
+
+<div class = "container-fluid">
+	<div class = "row">
+		<div class = "col-xs-12">
+			<H1 class = "well text-center bold">
+				Login 
+			</H1>
+			<form>
+
+			</form>
+		</div>
+	</div>
+</div>
+<div class = "container-fluid">
+	<div class = "col-xs-5">
+	</div>
+	<form class = "col-xs-2">
+		<div class = "form-group">
+			<input class = "form-control" name = "loginInf" id = "loginInf" type = "text" placeholder = "username/email..">
+		</div>
+		<div class = "form-group">
+			<input class = "form-control" name = "password" id = "password" type = "password" placeholder = "password..">
+		</div>
+		<div class = "form-group">
+			<button class = "form-control btn btn-info" name = "submitLogin" id = "submitLogin" type = "button" onclick = onLogin()> Login </button>
+		</div>
+	</form>	
+	<div class = "col-xs-5">
+	</div>
+</div>
+
+
+
+
+
+<script>
+
+var nonRightLogin = false;
+
+function onLogin(){
+var password = document.getElementById("password").value;
+var userMail = document.getElementById("loginInf").value;
+if(password.length > 0 && userMail.length > 0)
+	sendFormInfo();
+
+}
+
+function sendFormInfo(){
+	var loginInfo = document.getElementById("loginInf").value;
+	var passwordInfo = returnHashPass(document.getElementById("password").value);
+	var url="CheckLoginInfo.jsp?loginInf="+loginInfo + "&password=" + passwordInfo + "&password=";
+	 
+	if(window.XMLHttpRequest){  
+		request = new XMLHttpRequest();  
+	}  
+    else if(window.ActiveXObject){  
+		request = new ActiveXObject("Microsoft.XMLHTTP");  
+	}  
+	
+	try{   
+		request.open("GET",url,true);
+		request.onreadystatechange = getInfo;
+		request.send();
+		}catch(e){alert("Unable to connect to server");}  
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
